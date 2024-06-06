@@ -17,35 +17,6 @@
 
     <modules>
         <module>core</module>
-
-        <!-- validators -->
-        <module>validator-jakartaee</module>
-        <module>validator-okaeri</module>
-
-        <!-- yaml modules -->
-        <module>yaml-bukkit</module>
-        <module>yaml-bungee</module>
-        <module>yaml-snakeyaml</module>
-
-        <!-- hjson modules -->
-        <module>hjson</module>
-
-        <!-- json modules -->
-        <module>json-gson</module>
-        <module>json-simple</module>
-
-        <!-- hocon modules -->
-        <module>hocon-lightbend</module>
-
-        <!-- serdes modules -->
-        <module>serdes-bucket4j</module>
-        <module>serdes-bukkit</module>
-        <module>serdes-bungee</module>
-        <module>serdes-commons</module>
-
-        <!-- serdes modules: okaeri-commons -->
-        <module>serdes-okaeri</module>
-        <module>serdes-okaeri-bukkit</module>
     </modules>
 
     <build>
@@ -124,16 +95,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <distributionManagement>
-        <repository>
-            <id>storehouse-releases</id>
-            <url>https://storehouse.okaeri.eu/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>storehouse-snapshots</id>
-            <url>https://storehouse.okaeri.eu/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
 </project>
