@@ -74,6 +74,13 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>pnx-repo</id>
+            <url>https://repo.powernukkitx.org/releases</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>

@@ -1,0 +1,30 @@
+name: Upload to PNX Repo
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Configure Maven settings
+        uses: s4u/maven-settings-action@v4.0.0
+        with:
+          servers: |
+            [{ "id": "pnx-repo", "username": "${{ secrets.PNX_REPO_USERNAME }}", "password": "${{ secrets.PNX_REPO_PASSWORD }}" }]
+
+      - name: Deploy to PNX Repo
+        run: |
+          mvn deploy
